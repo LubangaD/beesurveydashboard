@@ -5,11 +5,11 @@ import plotly.express as px
 import pandas as pd
 
 # Load the dataset
-bees_data= pd.read_csv("Dataset/intro_bees.csv")
-
+#bees_data= pd.read_csv("Dataset/intro_bees.csv")
+df = pd.read_csv("https://raw.githubusercontent.com/LubangaD/beesurveydashboard/refs/heads/main/Dataset/intro_bees.csv")
 # Initialize the Dash app
 app = dash.Dash(__name__)
-
+app = app.server
 # App layout
 app.layout = html.Div([
     html.H1("Bee Colony Impact Dashboard"),
