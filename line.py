@@ -39,8 +39,6 @@ app.layout = html.Div([
     dcc.Graph(id='my_bee_map', figure={})
 
 ])
-
-
 # ------------------------------------------------------------------------------
 # Connect the Plotly graphs with Dash Components
 @app.callback(
