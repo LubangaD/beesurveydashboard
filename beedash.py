@@ -9,7 +9,7 @@ server = app.server
 # ------------------------------------------------------------------------------
 
 # Import and clean data (importing CSV into pandas)
-#df = pd.read_csv("Dataset/intro_bees.csv")
+#df = pd.read_csv("Dataset/intro_bees.csv") #If you have the data locally
 df = pd.read_csv("https://raw.githubusercontent.com/LubangaD/beesurveydashboard/refs/heads/main/Dataset/intro_bees.csv")
 df = df.groupby(['State', 'ANSI', 'Affected by', 'Year', 'state_code'])[['Pct of Colonies Impacted']].mean()
 df.reset_index(inplace=True)
